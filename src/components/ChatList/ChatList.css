@@ -1,0 +1,84 @@
+.chatListtextContainer {
+  flex-direction: column;
+  margin-left: 100px;
+  background: linear-gradient(265deg, #3a3d3baf, #344239ad);
+  color: white;
+  text-size-adjust: inherit;
+  align-items: center;
+  margin-top: 1vh;
+  width: 50%;
+  height: 5%;
+  border-radius: 5px;
+  font-size: 1.3em;
+  animation-duration: 3s;
+  transition-duration: 1s;
+}
+.updateButton {
+  width: 10vw;
+  height: 5vh;
+  border-radius: 0.5vw;
+  margin-left: 100px;
+  margin-top: 1vh;
+  transition-duration: 1s;
+}
+
+.updateButton:hover {
+  animation-duration: 3s;
+  background-color: #1abe4ead;
+  color: #fff;
+  border-width: 0px;
+}
+.chatListtextContainer:hover {
+  animation-duration: 3s;
+  background-color: #0ba53cad;
+}
+.textInside {
+  margin-top: 1.2vh;
+  color: #fff !important;
+}
+.wrapperContainer {
+  display: flex;
+  overflow-y: hidden;
+  flex-direction: column;
+  background: #f3f3f3;
+  border-radius: 8px;
+  height: 100%;
+  width: 60%;
+}
+
+.activeContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1%;
+}
+
+.activeItem {
+  display: flex;
+  align-items: center;
+}
+
+.lds-dual-ring {
+  margin-left: 100px;
+  display: inline-block;
+  width: 10vw;
+  height: 10vh;
+}
+.lds-dual-ring:after {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #02a335af;
+  border-color: #02a335af transparent #02a335af transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

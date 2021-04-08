@@ -1,0 +1,92 @@
+.form {
+  display: flex;
+  background: #fff;
+  border-top: 0px solid #0;
+  height: 7.5%;
+}
+
+.input {
+  border: none;
+  border-radius: 0;
+  padding: 5%;
+  width: 90%;
+  align-self: center;
+  font-size: 1.2em;
+}
+
+.sendButton {
+  border: none;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #00c53e;
+  padding: 20px;
+  display: inline-block;
+  width: 7vh;
+  height: 7vh;
+  align-items: end;
+  align-self: default;
+  border-radius: 40px;
+}
+button > img  {
+  display: none !important;
+}
+.send {
+  width: 100%;
+  height: 100%;
+}
+.sendButton:hover {
+  -webkit-filter: brightness(80%);
+}
+
+
+
+
+.forma {
+  display: flex;
+  background: #fff;
+  height: 20%;
+  overflow-y: hidden !important;
+
+}
+
+.input {
+  overflow-y: hidden;
+  border: none;
+  border-radius: 0;
+  padding: 5%;
+  width: 90%;
+  align-self: center;
+  font-size: 1em;
+}
+
+
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  overflow-y: hidden !important;
+
+
+}
+
+.sendButtona {
+  overflow: hidden !important;
+  border: none;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #00c53e;
+  padding: 20px;
+  display: inline-block;
+  width: 2vh;
+  height: 2vh;
+  align-items: end;
+  align-self: default;
+  border-radius: 40px;
+}
+
+.sendButtona:hover {
+  -webkit-filter: brightness(80%);
+}

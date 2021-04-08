@@ -1,0 +1,123 @@
+
+.outerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1d;
+}
+
+.container {
+  display: flex;
+  overflow-y: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f3f3f3;
+  border-radius: 8px;
+  height: 100%;
+  width: 60%;
+}
+
+
+.outerContainera {
+  overflow-y: hidden;
+
+  display: flex;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 70vw 25vw;
+  grid-template-rows: 60% auto;
+  background-color: #1a1a1d;
+}
+
+.containera {
+  overflow-y: hidden;
+
+  grid-column: 2 / 2; grid-row: 2 / 2;
+  display: flex;
+  overflow-y: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f3f3f3;
+  border-radius: 8px;
+  height: 100%;
+  width: 80%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .outerContainer {
+    height: 100%;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.chooseButton {
+  overflow-y: hidden;
+  border-radius: 8px;
+  background-color: #059633ad;
+  color: white;
+  border: 2px solid #fff;
+  height: 7.5vh !important;
+  z-index: 100;
+  transition-duration: 0.4s;
+  font-size: 24px;
+}
+
+.buttonCage {
+  overflow-y: hidden;
+  max-width: 100%;
+  display: flex;
+}
+
+.chooseButton:hover {
+  overflow-y: hidden;
+
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
+.Button {
+  overflow-y: hidden;
+  width: 10vw;
+  height: 5vh;
+  border-radius: 0.5vw;
+  margin-left: 100px;
+  margin-top: 1vh;
+  transition-duration: 1s;
+  animation-duration: 3s;
+  background-color: #1abe4ead;
+  color: #fff;
+  border-width: 0px;
+}
+
+.outButton { 
+  overflow-y: hidden;
+
+  background-color: #1abe4ead;
+
+}
+.endButton {
+  background-color: #c91717ad;
+
+}
+.startButton {
+  background-color: #1abe4ead;
+
+}
+
+
+.Button:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
