@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import onlineIcon from '../../icons/onlineIcon.png';
+import onlineIcon from "../../icons/onlineIcon.png";
 
-import './TextContainer.css';
+import "./TextContainer.css";
 
 const TextContainer = ({ users }) => (
   <div className="textContainer">
     <div>
       <h1>
-        Ваш живой чат с клиентом!{' '}
+        Ваш живой чат с клиентом!{" "}
         <span role="img" aria-label="emoji">
           💬
         </span>
@@ -19,7 +19,7 @@ const TextContainer = ({ users }) => (
         <h1>Сейчас в чате:</h1>
         <div className="activeContainer">
           <h2>
-            {users.map(name => (
+            {users.map((name) => (
               <div key={name} className="activeItem">
                 {name}
                 <img alt="Online Icon" src={onlineIcon} />

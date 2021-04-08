@@ -1,20 +1,20 @@
-const commonPaths = require('./common-paths');
+const commonPaths = require("./common-paths");
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
   output: {
     path: commonPaths.outputPath,
-    publicPath: '/',
+    publicPath: "/",
   },
-  target: 'web',
+  target: "web",
   optimization: {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          chunks: 'initial',
+          chunks: "initial",
           test: /[\\/]node_modules[\\/]semantic-ui-([\S]+)[\\/]/,
-          name: 'vendor',
+          name: "vendor",
           enforce: true,
         },
       },

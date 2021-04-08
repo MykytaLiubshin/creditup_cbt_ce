@@ -1,7 +1,7 @@
-const buildValidations = require('./build-utils/build-validations');
-const commonConfig = require('./build-utils/webpack.common');
-const argv = require('webpack-nano/argv');
-const { merge } = require('webpack-merge');
+const buildValidations = require("./build-utils/build-validations");
+const commonConfig = require("./build-utils/webpack.common");
+const argv = require("webpack-nano/argv");
+const { merge } = require("webpack-merge");
 
 const addons = (/* string | string[] */ addonsArg) => {
   let addons = Array.isArray(addonsArg)

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import './Join.css';
+import "./Join.css";
 
 export default function SignIn() {
-  const [name, setName] = useState('');
-  const [room, setRoom] = useState('');
+  const [name, setName] = useState("");
+  const [room, setRoom] = useState("");
 
   return (
     <div className="joinOuterContainer">
@@ -16,7 +16,7 @@ export default function SignIn() {
             placeholder="Ваше имя"
             className="joinInput ft-20"
             type="text"
-            onChange={event => setName(event.target.value)}
+            onChange={(event) => setName(event.target.value)}
           />
         </div>
         <div>
@@ -24,14 +24,14 @@ export default function SignIn() {
             placeholder="Номер чата"
             className="joinInput mt-20 ft-20"
             type="text"
-            onChange={event => setRoom(event.target.value)}
+            onChange={(event) => setRoom(event.target.value)}
           />
         </div>
         <Link
-          onClick={e => (!name || !room ? e.preventDefault() : null)}
+          onClick={(e) => (!name || !room ? e.preventDefault() : null)}
           to={`/chat?name=${name}&room=${room}`}
         >
-          <button className={'button mt-20  ft-20'} type="submit">
+          <button className={"button mt-20  ft-20"} type="submit">
             Войти
           </button>
         </Link>

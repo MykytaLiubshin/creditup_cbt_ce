@@ -1,12 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import './Message.css';
-
+import "./Message.css";
 
 const Message = ({ message: { text, user }, name }) => {
   let isSentByCurrentUser = false;
   let emojified = text;
-  let checker = 'http';
+  let checker = "http";
 
   if (user === name) {
     isSentByCurrentUser = true;

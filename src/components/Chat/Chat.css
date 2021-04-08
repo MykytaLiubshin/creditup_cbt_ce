@@ -1,4 +1,3 @@
-
 .outerContainer {
   display: flex;
   justify-content: center;
@@ -18,7 +17,6 @@
   width: 60%;
 }
 
-
 .outerContainera {
   overflow-y: hidden;
 
@@ -33,7 +31,8 @@
 .containera {
   overflow-y: hidden;
 
-  grid-column: 2 / 2; grid-row: 2 / 2;
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
   display: flex;
   overflow-y: hidden;
   flex-direction: column;
@@ -100,24 +99,19 @@
   border-width: 0px;
 }
 
-.outButton { 
+.outButton {
   overflow-y: hidden;
 
   background-color: #1abe4ead;
-
 }
 .endButton {
   background-color: #c91717ad;
-
 }
 .startButton {
   background-color: #1abe4ead;
-
 }
-
 
 .Button:hover {
   filter: brightness(120%);
   cursor: pointer;
 }
-

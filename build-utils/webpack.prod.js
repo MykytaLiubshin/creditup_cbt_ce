@@ -1,28 +1,28 @@
-const commonPaths = require('./common-paths');
-const process = require('process');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const commonPaths = require("./common-paths");
+const process = require("process");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const config = {
-  mode: 'production',
+  mode: "production",
   entry: {
-    app: ['babel-polyfill', `${commonPaths.appEntry}/index.js`],
+    app: ["babel-polyfill", `${commonPaths.appEntry}/index.js`],
   },
   output: {
-    filename: 'static/[name].bundle.js',
+    filename: "static/[name].bundle.js",
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   module: {
     rules: [
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: ["babel-loader"],
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
           },
         ],
       },
@@ -39,21 +39,21 @@ const config = {
             },
           },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               importLoaders: 1,
               sourceMap: true,
               esModule: true,
               modules: {
-                compileType: 'module',
-                mode: 'local',
-                exportLocalsConvention: 'camelCaseOnly',
+                compileType: "module",
+                mode: "local",
+                exportLocalsConvention: "camelCaseOnly",
                 namedExport: true,
               },
             },
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
           },
         ],
       },
@@ -61,7 +61,7 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[fullhash].css',
+      filename: "styles/[name].[fullhash].css",
     }),
   ],
 };

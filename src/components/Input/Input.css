@@ -28,7 +28,7 @@
   align-self: default;
   border-radius: 40px;
 }
-button > img  {
+button > img {
   display: none !important;
 }
 .send {
@@ -39,15 +39,11 @@ button > img  {
   -webkit-filter: brightness(80%);
 }
 
-
-
-
 .forma {
   display: flex;
   background: #fff;
   height: 20%;
   overflow-y: hidden !important;
-
 }
 
 .input {
@@ -60,15 +56,11 @@ button > img  {
   font-size: 1em;
 }
 
-
-
 input:focus,
 textarea:focus,
 select:focus {
   outline: none;
   overflow-y: hidden !important;
-
-
 }
 
 .sendButtona {

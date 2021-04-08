@@ -1,20 +1,24 @@
-const commonPaths = require('./common-paths');
+const commonPaths = require("./common-paths");
 
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-const { WebpackPluginServe: Serve } = require('webpack-plugin-serve');
-const process = require('process');
-const port =  3000;
-require('babel-polyfill');
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const { WebpackPluginServe: Serve } = require("webpack-plugin-serve");
+const process = require("process");
+const port = 3000;
+require("babel-polyfill");
 
 const config = {
-  mode: 'development',
+  mode: "development",
   entry: {
-    app: ['babel-polyfill', `${commonPaths.appEntry}/index.js`, 'webpack-plugin-serve/client'],
+    app: [
+      "babel-polyfill",
+      `${commonPaths.appEntry}/index.js`,
+      "webpack-plugin-serve/client",
+    ],
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: "[name].bundle.js",
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
@@ -22,9 +26,9 @@ const config = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
-              plugins: [require('react-refresh/babel')].filter(Boolean),
+              plugins: [require("react-refresh/babel")].filter(Boolean),
             },
           },
         ],
@@ -33,7 +37,7 @@ const config = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
           },
         ],
       },
@@ -41,7 +45,7 @@ const config = {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader',
+            loader: "style-loader",
             options: {
               esModule: true,
               modules: {
@@ -50,13 +54,13 @@ const config = {
             },
           },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               esModule: true,
               modules: {
-                compileType: 'module',
-                mode: 'local',
-                exportLocalsConvention: 'camelCaseOnly',
+                compileType: "module",
+                mode: "local",
+                exportLocalsConvention: "camelCaseOnly",
                 namedExport: true,
               },
             },
@@ -67,13 +71,13 @@ const config = {
   },
   plugins: [
     new ReactRefreshWebpackPlugin({
-      overlay: { sockIntegration: 'wps' },
+      overlay: { sockIntegration: "wps" },
     }),
     new Serve({
       historyFallback: true,
       liveReload: false,
       hmr: true,
-      host: 'localhost',
+      host: "localhost",
       port: port,
       open: true,
       static: commonPaths.outputPath,
