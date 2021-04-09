@@ -20,8 +20,8 @@ export const buttonStyles = (i, branch) => {
   return {
     height: "5vh",
     width: `${100 / branch.length}vw`,
-    marginLeft: i === 0 ? "1vw" : "1vw",
-    marginRight: i === branch.length - 1 ? "1vw" : "1vw",
+    marginLeft: "3%",
+    marginRight: "3%",
   };
 };
 

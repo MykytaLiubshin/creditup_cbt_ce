@@ -58,8 +58,7 @@ const Chat = ({ match = undefined }) => {
     </button>
   );
 
-  console.log(name);
-  console.log("Hello, friend.");
+
   useEffect(() => {
     CHAT = roomId;
     setRoom(roomId);
@@ -69,7 +68,7 @@ const Chat = ({ match = undefined }) => {
 
     if (!room && messages === []) {
       createNewChat();
-      console.log(CHAT);
+
       setRoom(CHAT);
     }
 
@@ -99,7 +98,6 @@ const Chat = ({ match = undefined }) => {
       let messages = hist?.messages;
 
       const needs_handling = (tempo, len = 0) => {
-        console.log(len, tempo.message_id);
         if (tempo.message_type === "Branch" && tempo.message_id === len) {
           setBranch(JSON.parse(tempo.message));
           state = false;
@@ -192,7 +190,7 @@ const Chat = ({ match = undefined }) => {
     >
       <div className={name === "client" ? "container" : "containerManager"}>
         <InfoBar room={""} />
-        {!loaded ? (
+        {!loaded && name === "CreditUp" ? (
           <Loader />
         ) : messages === [] || messages === undefined ? (
           ""

@@ -1,15 +1,27 @@
+.main-container {
+  position: fixed;
+  width: 20vw;
+  height: 20vh;
+}
+
 .outerContainer {
   display: flex;
+  min-width: 300px;
+  max-height: 600px;
+  min-height: 400px;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #1a1a1d;
 }
 
 .container {
   display: flex;
+  min-width: 300px;
+  min-height: 400px;
   overflow-y: hidden;
   flex-direction: column;
+  border: 1px solid #f3f3f3;
+  overflow-x: hidden;
   justify-content: space-between;
   background: #f3f3f3;
   border-radius: 8px;
@@ -66,10 +78,10 @@
   background-color: #059633ad;
   color: white;
   border: 2px solid #fff;
-  height: 7.5vh !important;
+  height: 15vh !important;
   z-index: 100;
   transition-duration: 0.4s;
-  font-size: 24px;
+  font-size: 12px;
 }
 
 .buttonCage {
@@ -85,51 +97,11 @@
   cursor: pointer;
 }
 
-.Button {
-  overflow-y: hidden;
-  width: 10vw;
-  height: 5vh;
-  border-radius: 0.5vw;
-  margin-left: 100px;
-  margin-top: 1vh;
-  transition-duration: 1s;
-  animation-duration: 3s;
-  background-color: #1abe4ead;
-  color: #fff;
-  border-width: 0px;
-}
-
-.outButton {
-  overflow-y: hidden;
-
-  background-color: #1abe4ead;
-}
-.endButton {
-  background-color: #c91717ad;
-}
-.startButton {
-  background-color: #1abe4ead;
-}
-
-.Button:hover {
-  filter: brightness(120%);
-  cursor: pointer;
-}
-
 .form {
   display: flex;
   background: #fff;
   border-top: 0px solid #0;
   height: 7.5%;
-}
-
-.input {
-  border: none;
-  border-radius: 0;
-  padding: 5%;
-  width: 90%;
-  align-self: center;
-  font-size: 1.2em;
 }
 
 .sendButton {
@@ -140,8 +112,8 @@
   background: #00c53e;
   padding: 20px;
   display: inline-block;
-  width: 7vh;
-  height: 7vh;
+  width: 3vh;
+  height: 3vh;
   align-items: end;
   align-self: default;
   border-radius: 40px;
@@ -413,8 +385,8 @@ button:focus {
 }
 
 .messages {
-  padding: 5% 0;
-  overflow: auto;
+  min-width: 300px;
+  min-height: 400px;
   flex: auto;
   background-color: #f3f3f3;
 }
