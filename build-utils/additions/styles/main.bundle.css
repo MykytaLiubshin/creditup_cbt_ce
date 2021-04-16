@@ -3,7 +3,38 @@
   width: 20vw;
   height: 20vh;
 }
-
+@media only screen and (max-width: 768px) {
+  .messages {
+    width: 100%;
+    max-height: 80%;
+    position: fixed;
+    min-width: 100%;
+    z-index: 1;
+  }
+  .chooseButton {
+    max-height: 10%;
+  }
+  .main-container {
+    width: 100%;
+    max-height: 80%;
+  }
+  .form {
+    max-height: 80%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom: 0px;
+    color: #fff;
+    background-color: #fff;
+    z-index: 9;
+  }
+  .input {
+    margin-bottom: 10px;
+  }
+  .sendButton {
+    margin-bottom: 20px;
+  }
+}
 .outerContainer {
   display: flex;
   min-width: 300px;
@@ -394,6 +425,19 @@ button:focus {
 ::-webkit-scrollbar {
   width: 13px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #03c7419f;
+  border-radius: 10px;
+}
+
 .hide {
   display: none;
 }

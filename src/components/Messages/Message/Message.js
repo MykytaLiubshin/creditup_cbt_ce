@@ -34,7 +34,7 @@ const Message = ({ message: { text, user }, name }) => {
           <p className="messageText colorDark">{emojified}</p>
         )}
       </div>
-      <p className="sentText pl-10 ">{user}</p>
+      <p className="sentText pl-10 ">{"CreditUp"}</p>
     </div>
   );
 };

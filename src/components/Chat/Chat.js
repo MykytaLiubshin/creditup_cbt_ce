@@ -58,7 +58,6 @@ const Chat = ({ match = undefined }) => {
     </button>
   );
 
-
   useEffect(() => {
     CHAT = roomId;
     setRoom(roomId);
@@ -185,14 +184,10 @@ const Chat = ({ match = undefined }) => {
   };
 
   const respond = (
-    <div
-      className={name === "client" ? "outerContainer" : "outerContainerManager"}
-    >
-      <div className={name === "client" ? "container" : "containerManager"}>
+    <div className="outerContainer">
+      <div className="container">
         <InfoBar room={""} />
-        {!loaded && name === "CreditUp" ? (
-          <Loader />
-        ) : messages === [] || messages === undefined ? (
+        {messages === [] || messages === undefined ? (
           ""
         ) : (
           <Messages messages={messages} name={name} />
@@ -205,58 +200,9 @@ const Chat = ({ match = undefined }) => {
           </div>
         )}
       </div>
-
-      {name === "CreditUp" ? (
-        <ul style={{ display: "block" }}>
-          <li>
-            <button
-              className="startButton Button"
-              onClick={() =>
-                fetch(`${ENDPOINT}/manager_chat_start/${CHAT}/`, {
-                  method: "POST",
-                  headers: fetchHEADERS,
-                })
-              }
-            >
-              <h3 className="textInside">Start</h3>
-            </button>
-          </li>
-
-          <li>
-            <button
-              className="endButton Button"
-              onClick={() =>
-                fetch(`${ENDPOINT}/manager_chat_close/${CHAT}/`, {
-                  method: "POST",
-                  headers: fetchHEADERS,
-                })
-              }
-            >
-              <h3 className="textInside">Close</h3>
-            </button>
-          </li>
-          <li>
-            <button className="outButton Button">
-              <Link to="/chatlist/" style={{ textDecoration: "none" }}>
-                <h3 className="textInside">Out</h3>
-              </Link>
-            </button>
-          </li>
-        </ul>
-      ) : (
-        <></>
-      )}
     </div>
   );
 
-  return name === "client" ? (
-    <div id="outer">
-      <div height="20%" className="clientContainer">
-        {respond}
-      </div>
-    </div>
-  ) : (
-    respond
-  );
+  return name === "client" ? <div id="outer">{respond}</div> : respond;
 };
 export default Chat;
